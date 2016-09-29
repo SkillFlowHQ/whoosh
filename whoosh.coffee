@@ -27,9 +27,9 @@ $ ->
     while whoosh.length > 0 && curr >= whoosh[0].scrollTarget
       whoosh.shift().callback()
 
-  $('*[data-whoosh]').each ->
+  $('*[data-whoosh], *[data-whoosh-from]').each ->
     $this = $ this
-    dir = $this.data('whoosh')
+    dir = $this.data('whoosh') || $this.data('whoosh-from')
     $this.css
       position: 'relative'
       opacity: 0
