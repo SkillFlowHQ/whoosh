@@ -1,6 +1,6 @@
 {
   "name": "whoosh-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easy slide-in transitions on scroll.",
   "main": "whoosh.coffee",
   "scripts": {
