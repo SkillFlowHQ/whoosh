@@ -9,9 +9,10 @@
 # Issues
 #   works for only for normally positioned elements.
 
-$ ->
-  offset = '-2em'
+window.whoosh = 
+  offset: '2em'
 
+$ ->
   whoosh = [];
   throttle = new Date().getTime()
   msDelay = 200
@@ -30,13 +31,12 @@ $ ->
   $('*[data-whoosh], *[data-whoosh-from]').each ->
     $this = $ this
     dir = $this.data('whoosh') || $this.data('whoosh-from')
+    offset = $this.data('offset') || window.whoosh.offset
     $this.css
       position: 'relative'
       opacity: 0
-      top: if dir == 'top' then offset else 0
-      right: if dir == 'right' then offset else 0
-      bottom: if dir == 'bottom' then offset else 0
-      left: if dir == 'left' then offset else 0
+      top: if dir == 'top' then '-'+offset else if dir == 'bottom' then offset else 0
+      left: if dir == 'left' then '-'+offset else if dir == 'right' then offset else 0
     setTimeout ->
       $this.css
         transition: 'all 0.5s'
