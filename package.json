@@ -1,0 +1,20 @@
+{
+  "name": "whoosh-js",
+  "version": "1.0.0",
+  "description": "Easy slide-in transitions on scroll.",
+  "main": "whoosh.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "coffee -c whoosh.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkillFlowHQ/whoosh.git"
+  },
+  "author": "Clive Chan (cc@clive.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SkillFlowHQ/whoosh/issues"
+  },
+  "homepage": "https://github.com/SkillFlowHQ/whoosh#readme"
+}
